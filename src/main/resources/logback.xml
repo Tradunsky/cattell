@@ -1,0 +1,12 @@
+<configuration debug="true">
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <!--<Pattern>%d{dd.MM.yyyy_HH:mm:ss.SSS} | %-5level %logger{36} :: %msg%n</Pattern>-->
+            <Pattern>[%date{ISO8601}] %highlight(%-5level %logger{0} :: %msg%n)</Pattern>
+        </encoder>
+    </appender>
+
+    <root level="DEBUG">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
