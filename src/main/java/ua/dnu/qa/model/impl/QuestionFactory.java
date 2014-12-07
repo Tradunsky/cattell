@@ -9,8 +9,8 @@ import ua.dnu.qa.model.Question;
  */
 public class QuestionFactory {
 
-    public static Question createQuestion(String question, String[] answers, Integer rightAnswer) {
-        return new QuestionImpl(question, answers, rightAnswer);
+    public static Question createQuestion(Integer num, String question, String[] answers) {
+        return new QuestionImpl(num, question, answers);
     }
 //    @Document(collection = "questions")
 //    public static class QuestionImpl implements Question{
@@ -27,7 +27,7 @@ public class QuestionFactory {
 //        }
 //
 //        @Override
-//        public String getQuestion() {
+//        public String get() {
 //            return question;
 //        }
 //

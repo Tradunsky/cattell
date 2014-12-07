@@ -2,18 +2,32 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ua.dnu.qa</groupId>
-	<artifactId>kettell</artifactId>
+	<artifactId>cattell</artifactId>
 	<packaging>war</packaging>
 	<version>1.0-SNAPSHOT</version>
-	<name>Kettell test</name>
+	<name>Cattell test</name>
 
 	<properties>
         <spring.version>3.2.3.RELEASE</spring.version>
+        <!--<spring.version>4.1.2.RELEASE</spring.version>-->
         <java.version>1.7</java.version>
         <logback.version>1.1.2</logback.version>
 	</properties>
+    <build>
 
-	<dependencies>
+
+        <finalName>cattell</finalName>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <dependencies>
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
@@ -76,18 +90,5 @@
             <version>1.3.0</version>
         </dependency>
 	</dependencies>
-
-	<build>
-		<finalName>kettell</finalName>
-		<plugins>
-			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>${java.version}</source>
-					<target>${java.version}</target>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
 
 </project>

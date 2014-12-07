@@ -5,7 +5,10 @@ import java.util.List;
 /**
  * @author Tradunsky V.V.
  */
-public interface QuestionKey {
-    Integer getQuestionNumber();
+public interface User {
+    String SESSION_KEY = "UK";
+
+    void setAnswer(Integer num, Integer answer);
+
     List<Integer> getAnswers();
 }

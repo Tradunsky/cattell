@@ -28,7 +28,12 @@ public class QuestionServiceImpl implements QuestionService{
     }
 
     @Override
-    public Boolean checkAnswerToQuestion(String id, Integer answer) {
-        return questionDao.checkAnswerToQuestion(id, answer);
+    public Question get(Integer num) {
+        return questionDao.get(num);
     }
+
+//    @Override
+//    public Boolean checkAnswerToQuestion(String id, Integer answer) {
+//        return questionDao.checkAnswerToQuestion(id, answer);
+//    }
 }

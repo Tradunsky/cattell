@@ -15,17 +15,33 @@ public class QuestionImpl implements Question {
     String id;
     String question;
     String[] answers;
-//    Integer rightAnswer;
+    Integer num;
 
-    public QuestionImpl(String question, String[] answers, Integer rightAnswer) {
+    public QuestionImpl(Integer num, String question, String[] answers) {
+        this.num = num;
         this.question = question;
         this.answers = answers;
-//        this.rightAnswer = rightAnswer;
     }
 
     @Override
     public String getId() {
         return id;
+    }
+
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+
+    public void setAnswers(String[] answers) {
+        this.answers = answers;
+    }
+
+    public Integer getNum() {
+        return num;
+    }
+
+    public void setNum(Integer num) {
+        this.num = num;
     }
 
     @Override
@@ -37,11 +53,6 @@ public class QuestionImpl implements Question {
     public String[] getAnswers() {
         return answers;
     }
-
-//    @Override
-//    public Integer rightAnswer() {
-//        return rightAnswer;
-//    }
 
     public String toString(){
         return "{Question:{id:"+id+",question:"+question+", answers:{"+ Arrays.toString(answers)+"}}";

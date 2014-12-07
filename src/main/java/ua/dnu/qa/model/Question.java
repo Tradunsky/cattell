@@ -5,6 +5,7 @@ package ua.dnu.qa.model;
  */
 public interface Question {
     public String getId();
+    public Integer getNum();
     public String getQuestion();
     public String[] getAnswers();
 //    public Integer[] rightAnswer();

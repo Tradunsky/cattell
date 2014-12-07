@@ -12,5 +12,7 @@ public interface QuestionService {
 
     List<Question> listQuestions();
 
-    Boolean checkAnswerToQuestion(String id, Integer answer);
+    Question get(Integer num);
+
+//    Boolean checkAnswerToQuestion(String id, Integer answer);
 }

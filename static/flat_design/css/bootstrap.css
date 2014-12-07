@@ -239,13 +239,13 @@ a:hover, a:focus {
 	width: 460px;
 }
 .span5 {
-	width: 480px;
+	width: 409px;
 }
 .span4 {
 	width: 300px;
 }
 .span3 {
-	width: 320px;
+	/*width: 320px;*/
 }
 .span2 {
 	width: 140px;
@@ -574,7 +574,7 @@ h1 {
 	font-size: 38.5px;
 }
 h2 {
-	font-size: 31.5px;
+	font-size: 28.5px;
 }
 h3 {
 	font-size: 24.5px;
@@ -4760,7 +4760,7 @@ ul.work-images li div {
  width: 352px;
 }
  .span5 {
- width: 440px;
+ width: 409px;
 }
  .span4 {
  width: 228px;
@@ -5069,13 +5069,13 @@ ul.work-images li div {
  width: 570px;
 }
  .span5 {
- width: 470px;
+ width: 409px;
 }
  .span4 {
  width: 370px;
 }
  .span3 {
- width: 270px;
+ /*width: 270px;*/
 }
  .span2 {
  width: 170px;

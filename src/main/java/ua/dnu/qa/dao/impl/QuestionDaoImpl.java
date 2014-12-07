@@ -1,6 +1,5 @@
 package ua.dnu.qa.dao.impl;
 
-import org.bson.types.ObjectId;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +10,6 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Component;
 import ua.dnu.qa.dao.QuestionDao;
 import ua.dnu.qa.model.Question;
-import ua.dnu.qa.model.impl.QuestionFactory;
 import ua.dnu.qa.model.impl.QuestionImpl;
 
 import java.util.List;
@@ -38,16 +36,21 @@ public class QuestionDaoImpl implements QuestionDao {
     }
 
     @Override
-    public Boolean checkAnswerToQuestion(String id, Integer answer) {
-        Question question = mongoOperations.findOne(
-                Query.query(Criteria.where("_id").is(id)),
-                QuestionFactory.QuestionImpl.class
-                ,QUESTIONS
-        );
-//        Question question = mongoOperations.findById(id, Question.class, QUESTIONS);
-        LOG.info("Question is {} by id: {}", question, id);
-        if (question == null)
-            return null;
-        return question.rightAnswer().equals(answer);
+    public Question get(Integer num) {
+        return mongoOperations.findOne(Query.query(Criteria.where("num").is(num)), QuestionImpl.class, QUESTIONS);
     }
+
+//    @Override
+//    public Boolean checkAnswerToQuestion(String id, Integer answer) {
+//        Question question = mongoOperations.findOne(
+//                Query.query(Criteria.where("_id").is(id)),
+//                QuestionImpl.class
+//                ,QUESTIONS
+//        );
+////        Question question = mongoOperations.findById(id, Question.class, QUESTIONS);
+//        LOG.info("Question is {} by id: {}", question, id);
+//        if (question == null)
+//            return null;
+//        return question.rightAnswer().equals(answer);
+//    }
 }

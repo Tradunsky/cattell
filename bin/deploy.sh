@@ -4,5 +4,5 @@ cd ../
 
 mvn clean package
 echo "Start copy kettell.war to webaps"
-cp -up target/kettell.war /home/o111o1oo/dev/soft/java/servers/jetty/webapps/
+cp -up target/cattell.war /home/o111o1oo/dev/soft/java/servers/jetty/webapps/
 echo "End copy kettell.war to webaps"
