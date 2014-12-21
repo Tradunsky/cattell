@@ -2,7 +2,7 @@
   <div class="navbar-inner">
     <div class="container">
       <ul class="nav nav-collapse pull-right">
-        <li><a href="#profile"> Restart</a></li>
+        <li><a href="/cattell/question/"> Restart</a></li>
         <li>
             <div class="row">
                 <div class="span5">
@@ -12,7 +12,6 @@
             </div>
         </li>
       </ul>
-      <!-- Everything you want hidden at 940px or less, place within here -->
     </div>
   </div>
 </div>

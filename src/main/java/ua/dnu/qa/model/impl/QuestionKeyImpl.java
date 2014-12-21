@@ -14,6 +14,10 @@ public class QuestionKeyImpl implements QuestionKey {
     Integer questionNumber;
     List<Integer> keys;
 
+    public QuestionKeyImpl(){
+
+    }
+
     public QuestionKeyImpl(Integer questionNumber, List<Integer> keys){
         this.questionNumber = questionNumber;
         this.keys = keys;
@@ -21,6 +25,9 @@ public class QuestionKeyImpl implements QuestionKey {
 
     public QuestionKeyImpl(Integer questionNumber, final Boolean[] keys){
         this.questionNumber = questionNumber;
+        if (keys.length<2){
+            throw new IllegalArgumentException("Answers must be 3");
+        }
         List<Integer> scores = new ArrayList<Integer>(3){
             {
                 add(0, (keys[0])?2:0);

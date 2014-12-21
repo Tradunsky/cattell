@@ -1,6 +1,7 @@
 package ua.dnu.qa.dao;
 
 import ua.dnu.qa.model.Factor;
+import ua.dnu.qa.model.impl.FactorImpl;
 
 import java.util.List;
 
@@ -10,8 +11,10 @@ import java.util.List;
 public interface FactorDao {
     void add(Factor newFactor);
 
+    void update(Factor newFactor);
+
     Factor getFactorByName(String factorName);
 
-    List<Factor> list();
+    List<FactorImpl> list();
 
 }

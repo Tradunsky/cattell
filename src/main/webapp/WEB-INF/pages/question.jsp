@@ -12,7 +12,7 @@
       <!--START: answers container-->
       <div id="skills" class="container">
 
-        <h2 id="question-text"><span id="num_q"><%=question.getNum() %></span>. ${question.getQuestion()}:</h2>
+        <h2 id="question-text"><span id="num_q"><%=question.getNum() %></span>. <span id="text_q">${question.getQuestion()}</span></h2>
         <div class="row">
           <div class="span3" id="0">
             <div class="ps">

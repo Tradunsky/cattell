@@ -27,6 +27,13 @@ import java.util.List;
 @RequestMapping("question")
 public class QuestionController {
     private static final Logger LOG = LoggerFactory.getLogger(QuestionController.class);
+    public static final int QUESTION_COUNT = 187;
+
+    @ResponseBody
+    @RequestMapping("add")
+    public ModelAndView addQuestionForm() {
+        return new ModelAndView("addQuestion");
+    }
 
     @Autowired
     @Qualifier("questionService")
@@ -35,7 +42,7 @@ public class QuestionController {
     @RequestMapping
     @ResponseBody
     public ModelAndView index(HttpSession session) {
-        User user = UserFactory.createUser();
+        User user = UserFactory.createUser(QUESTION_COUNT);
         session.setAttribute(User.SESSION_KEY, user);
         ModelAndView model = new ModelAndView("question");
         Question question = questionService.get(1);
@@ -50,9 +57,9 @@ public class QuestionController {
                                  HttpSession session,
                                  HttpServletResponse resp) {
         User user = (User) session.getAttribute(User.SESSION_KEY);
-        user.setAnswer(num, answer);
+        user.setAnswer(num-1, answer);
         session.setAttribute(User.SESSION_KEY, user);
-        return "{\"result\":\"OK\", \"num\":"+num+", \"answer\":"+answer+"}";
+        return "{\"result\":\"OK\", \"num\":\""+num+"\", \"answer\":\""+answer+"\"}";
     }
 
     @ResponseBody
@@ -72,12 +79,6 @@ public class QuestionController {
     @RequestMapping("get/{num}")
     public Question getQuestion(@PathVariable("num") Integer num) {
         return questionService.get(num);
-    }
-
-    @ResponseBody
-    @RequestMapping("add")
-    public ModelAndView addQuestionForm() {
-        return new ModelAndView("add");
     }
 
     @ResponseBody

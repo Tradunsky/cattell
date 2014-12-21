@@ -89,6 +89,18 @@
             <artifactId>jackson-mapper-asl</artifactId>
             <version>1.3.0</version>
         </dependency>
-	</dependencies>
+        <!--launcher-->
+        <!--<dependency>-->
+            <!--<groupId>org.mortbay.jetty</groupId>-->
+            <!--<artifactId>maven-jetty-plugin</artifactId>-->
+            <!--<version>6.1.26</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.mortbay.jetty</groupId>-->
+            <!--<artifactId>jetty-util</artifactId>-->
+            <!--<version>6.1.26</version>-->
+        <!--</dependency>-->
+
+    </dependencies>
 
 </project>

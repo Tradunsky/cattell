@@ -10,8 +10,8 @@ import java.util.List;
  * @author Tradunsky V.V.
  */
 public class UserFactory {
-    public static User createUser(){
-        return new UserImpl();
+    public static User createUser(int answerCount){
+        return new UserImpl(answerCount);
     }
 
     public static Class<UserImpl> getImplClass(){
@@ -22,8 +22,8 @@ public class UserFactory {
 //        List<Integer> answers;
         Integer[] answers;
 
-        private UserImpl(){
-            answers = new Integer[187];
+        private UserImpl(int answerCount){
+            answers = new Integer[answerCount];
         }
 
         @Override

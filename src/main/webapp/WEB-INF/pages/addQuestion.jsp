@@ -3,12 +3,12 @@
 <html>
 <%@include file="head.jsp" %>
   <body>
-  <script type="text/javascript" src="/static/flat_design/js/add.js"></script>
+  <script type="text/javascript" src="/static/flat_design/js/addQuestion.js"></script>
     <%@include file="menu.jsp" %>
     <div class="clearfix">
       <!--START: answers container-->
       <div id="skills" class="container">
-      <form id="question_form" action="add" method="POST">
+      <form id="question_form" action="addQuestion" method="POST">
         <h2 id="question-text">
             <input type="text" name="num" placeholder="№" style="width: 50px;">
             <input type="text" name="question" placeholder="Введите вопрос">

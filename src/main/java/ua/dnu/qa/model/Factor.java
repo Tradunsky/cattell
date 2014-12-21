@@ -1,12 +1,15 @@
 package ua.dnu.qa.model;
 
+import ua.dnu.qa.model.impl.QuestionKeyImpl;
+
 import java.util.List;
-import java.util.Map;
 
 /**
  * @author Tradunsky V.V.
  */
 public interface Factor {
-    String getName();
-    List<QuestionKey> getKeys();
+    public String getId();
+    public String getFactorName();
+    public List<QuestionKeyImpl> getKeys();
+    public void addKeys(List<QuestionKeyImpl> keys);
 }
