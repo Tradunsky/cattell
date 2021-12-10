@@ -1,4 +1,4 @@
 cattell
 =======
 
-This is the Cattell's personality factors test. 
+This is Cattell's personality factors test. 
